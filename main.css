@@ -45,7 +45,7 @@ html,body{
     padding: 10px 20px;
 }
 
-#center>#heading>h1{
+h1{
     font-size: 120px;
     position: absolute;
     left: 50%;
@@ -55,8 +55,9 @@ html,body{
     font-weight: 900;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
+    /* background-color: red; */
 }
-#center>#heading>h2{
+/* #center>#heading>h2{
     font-size: 120px;
     position: absolute;
     left: 49.4%;
@@ -70,6 +71,20 @@ html,body{
     font-weight: 900;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
+} */
+
+h1::before{
+
+    content: "Happy Socks";
+    text-transform: uppercase;
+    position: absolute;
+    /* background-color: red; */
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    color: transparent;
 }
 
 #image{
@@ -95,17 +110,33 @@ html,body{
 
 #button{
     /* border: 2px solid #000; */
-    background-color: #a4ffa0;
+    background-color: rgb(153,255,153);
     padding: 20px 65px;
     font-size: 19px;
+    font-weight: 800;
     text-transform: uppercase;
     border-radius: 50%;
     text-transform: capitalize;
-    font-weight: 600;
+    /* font-weight: 600; */
     position: absolute;
-    right: 10%;
-    top: 20%;
+    right: 13%;
+    top: 25%;
     transform: rotate(-5deg);
+}
+
+#button2{
+    padding: 20px 50px;
+    border-radius: 50%;
+    font-size: 19px;
+    font-weight: 800;
+    background-color: rgb(153, 255, 153);
+    text-transform: uppercase;
+    position: absolute;
+    top: 79%;
+    left: 13%;
+    transform: rotate(25deg);
+    text-transform: capitalize;
+
 }
 
 #socks{
@@ -121,15 +152,15 @@ html,body{
     top: 27%;
     left: 12%;
     transform: rotate(7deg);
-    z-index: 999;
+    /* z-index: 999; */
 }
 
-#socks::after{
+#socks::before{
 
     content: " ";
+    position: absolute;
     height: 190px;
     width: 210px;
-    position: absolute;
     border: 2px solid #000;
     border-radius: 7px;
     z-index: -1;
@@ -139,3 +170,35 @@ html,body{
     top: -8%;
     left: 12%;
 }
+
+#socks2{
+    width: 200px;
+    height: 200px;
+    /* background-color: red; */
+    border: 2px solid #000;
+    background-image: url(https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80);
+    background-position:100%,100% ;
+    /* background-size: cover; */
+    position: absolute;
+    top: 60%;
+    right: 15%;
+    transform: rotate(-7deg);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#socks2::after{
+    content: "";
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-image: url(https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80);
+    background-size: cover;
+    background-position: 100%,100%;
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    left: -30px;
+}
+
